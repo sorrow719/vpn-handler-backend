@@ -51,4 +51,9 @@ public class VpnService implements IVpnService {
         return vpnStruct.toDto(vpnBaseRepository.save(newVpn));
     }
 
+    @Override
+    public void deleteAll() {
+        vpnBaseRepository.deleteAll();
+    }
+
 }

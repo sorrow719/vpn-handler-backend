@@ -2,6 +2,7 @@ package com.netracker.rest.controller;
 
 import com.netracker.dto.VpnDto;
 import com.netracker.services.IVpnService;
+import com.netracker.services.implementation.VpnService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +14,8 @@ public class VpnController {
     private final IVpnService iVpnService;
 
     @Autowired
-    public VpnController(IVpnService iVpnService) {
-        this.iVpnService = iVpnService;
+    public VpnController(VpnService vpnService) {
+        this.iVpnService = vpnService;
     }
 
     @GetMapping
@@ -40,5 +41,10 @@ public class VpnController {
     @PutMapping("/{id}")
     VpnDto updateById(@PathVariable("id") int id, @RequestBody VpnDto vpnDto) {
         return iVpnService.updateById(id,vpnDto);
+    }
+
+    @DeleteMapping()
+    void deleteAll() {
+        iVpnService.deleteAll();
     }
 }

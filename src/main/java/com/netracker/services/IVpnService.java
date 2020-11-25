@@ -17,4 +17,6 @@ public interface IVpnService {
     List<VpnDto> getList();
 
     VpnDto updateById(long id, VpnDto vpnDto);
+
+    void deleteAll();
 }
