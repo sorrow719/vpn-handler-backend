@@ -90,9 +90,9 @@
                             <springmvc>true</springmvc>
                             <schemes>http,https</schemes>
                             <basePath>/</basePath>
-                            <locations>com.netcracker.operationmanager.rest</locations>
+                            <locations>com.netcracker.rest.controller</locations>
                             <info>
-                                <title>Operation Manager REST API</title>
+                                <title>Note Manager REST API</title>
                                 <version>v1</version>
                             </info>
                             <swaggerDirectory>${project.build.directory}/swagger</swaggerDirectory>
