@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 
 @Entity
-@Table(name = "vpn")
+@Table(name = "vpn", schema = "public")
 public class Vpn {
     private long vpnServiceId;
     private String title;
